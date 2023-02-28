@@ -1,4 +1,82 @@
-<h2>Unit Converter</h2>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Unit Converter</h1>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="feet">Feets</label>
+                    <input type="number" id="feet" class="input" [(ngModel)]="feet" (keyup)="converter('f')" (change)="converter('f')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Inches</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="inch" (keyup)="converter('i')" (change)="converter('i')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Meters</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="meter" (keyup)="converter('me')" (change)="converter('me')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Milimeter</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="milimeter" (keyup)="converter('mm')" (change)="converter('mm')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Miles</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="mile" (keyup)="converter('mile')" (change)="converter('mile')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Kilometers</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="kilometer" (keyup)="converter('km')" (change)="converter('km')">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Yards</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="yard" (keyup)="converter('y')" (change)="converter('y')">
+                </div>
+                
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="inch">Centimeter</label>
+                    <input type="number" id="inch" class="input" [(ngModel)]="centimeter" (keyup)="converter('cm')" (change)="converter('cm')">
+                </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Unit Converter</h2>{{toConvert}} = {{fromConvert}}
 <div id="main">
     <div id="camera">
 
@@ -6,25 +84,45 @@
     <div id="app">
         <h2>unit converter</h2>
         <div class="input-div">
-            <label for="">Feet</label>
-            <input type="Number" id="feet" class="input" [(ngModel)]="feet" (keyup)="converter()">
+            <label for=""></label>
+            <select name="feet" id="feet" [(ngModel)]="toConvert">
+                <option (click)="converter(toConvert, fromConvert)" value="feet">Feet</option>
+                <option (click)="converter(toConvert, fromConvert)" value="inches">Inches</option>
+                <option (click)="converter(toConvert, fromConvert)" value="miles">Miles</option>
+
+                <!-- <option (click)="converter(toConvert, fromConvert)" value="Nanometers">Nanometers</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Micrones">Micrones</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Milimeter">Milimeter</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Centimeter">Centimeter</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Meters">Meters</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Kilometers">Kilometers</option>
+                <option (click)="converter(toConvert, fromConvert)" value="Yards">Yards</option> -->
+            </select>
+            <input type="number" id="toValue" class="input" [(ngModel)]="toValue" (keyup)="converter(toConvert, fromConvert)">
         </div>
         <div class="input-div">
             <h1>=</h1>
         </div>
         <div class="input-div">
-            <label for="">Inch</label>
-            {{inch}}
-            <input type="Number" id="inch" class="input" [(ngModel)]="feet">
+            <label for=""></label>
+            <select name="Inches" id="Inches" [(ngModel)]="fromConvert">
+                <option (click)="converter(fromConvert, toConvert)" value="inches">Inches</option>
+                <option (click)="converter(fromConvert, toConvert)" value="feet">Feet</option>
+                <option (click)="converter(fromConvert, toConvert)" value="miles">Miles</option>
+
+                <!-- <option (click)="converter(fromConvert, toConvert)" value="Nanometers">Nanometers</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Micrones">Micrones</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Milimeter">Milimeter</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Centimeter">Centimeter</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Meters">Meters</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Kilometers">Kilometers</option>
+                <option (click)="converter(fromConvert, toConvert)" value="Yards">Yards</option> -->
+            </select>
+            <input type="number" id="fromValue" class="input" [(ngModel)]="fromValue" (keyup)="converter(fromConvert, toConvert)">
         </div>
     </div>
-    <div id="nav1">
+</div>
 
-    </div>
-    <div id="nav2">
-
-    </div>
-    <div id="nav3">
-
-    </div>
+<div>
+   
 </div>
