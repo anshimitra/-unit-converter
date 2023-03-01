@@ -11,14 +11,6 @@ export class FeetComponent implements OnInit {
   constructor() { }
     toValue:any= 1;
     fromValue:any = 12;
-
-    // meter:any= 1;
-    // milimeter:any= 1;
-    // mile:any= 1;
-    // kilometer:any= 1;
-    // yard:any= 1;
-    // centimeter:any= 1;
-
     toConvert:any = 'feet';
     fromConvert:any = 'inches';
 
